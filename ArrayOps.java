@@ -59,21 +59,20 @@ public class ArrayOps {
         }
         }
        }
-        
+      return true;  
     }
 
     public static boolean isSorted(int [] array) {
-        boolean decreasing = true;
-        boolean increasing = true;
+        boolean increasing = array[0] < array[1];
         for(int i = 0; i < array.length; i++){
-            if(array[i] >= array[i + 1]){
-                decreasing = false;
+            if(array[i] > array[i + 1] && increasing == true){
+               return false;
             }
-            if(array[i] <= array[i + 1]){
-                increasing = false;
+            else if(array[i] < array[i + 1] && increasing == false){
+               return false;
             }
         }
-        return false;
+        return true;
     }
 
 }
