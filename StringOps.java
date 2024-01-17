@@ -25,28 +25,29 @@ public class StringOps {
     }
 
     public static String capVowelsLowRest (String string) {
-        String string = "";
-       for(int i = 0; i < str.length(); i++){
-        if(str.chatAt(i) > 64 && str.chatAt(i) < 91){
-            if(str.chatAt(i) == 'A' || str.chatAt(i) == 'E' || str.chatAt(i) == 'I' || str.chatAt(i) == 'O' || str.chatAt(i) == 'U'){
-                string += (char)(str.charAt(i));
+        String ans = "";
+       for(int i = 0; i < string.length(); i++){
+        if(string.chatAt(i) > 64 && string.chatAt(i) < 91){
+            if(string.chatAt(i) == 'A' || string.chatAt(i) == 'E' || string.chatAt(i) == 'I' || string.chatAt(i) == 'O' || string.chatAt(i) == 'U'){
+                ans = ans + (char)(string.charAt(i));
             } else {
-                string += (char)(str.charAt(i) + 32);
+                ans = ans + (char)(string.charAt(i) + 32);
             }
-        if(str.chatAt(i) >90){   
-        if(str.chatAt(i) == 'a' || str.chatAt(i) == 'e' || str.chatAt(i) == 'i' || str.chatAt(i) == 'o' || str.chatAt(i) == 'u' ){
-             string +=(char)(str.chatAt(i)-32);
+        if(string.chatAt(i) >90){   
+        if(string.chatAt(i) == 'a' || string.chatAt(i) == 'e' || string.chatAt(i) == 'i' || string.chatAt(i) == 'o' || string.chatAt(i) == 'u' ){
+             ans = ans + (char)(string.chatAt(i)-32);
         } else {
-            string += (char)(str.charAt(i));
+            ans = ans + (char)(string.charAt(i));
         }
       }
        }
-        return string;
+        return ans;
     }
 
     public static String camelCase (String string) {
         boolean newOne = false;
         boolean firstOne = true;
+        int n = string.length;
         for (int i = 0; i < n; i++) {
             if (newOne == true && string.charAt(i) != ' ') {
                 if (string.charAt(i) >= 97 && string.charAt(i) <= 122) {
@@ -58,12 +59,12 @@ public class StringOps {
                     firstOne = false;
             } else if (firstOne == false && string.charAt(i) == ' ') {
                 string = string.substring(0, i) + string.substring(i + 1);
-                string.length()--; 
+                n--; 
                 i--; 
                 newOne = true;
             } else if (string.charAt(i) == ' ') {
                 string = string.substring(0, i) + string.substring(i + 1);
-                string.length()--;
+                n--;
                 i--;
             }
         }
@@ -73,7 +74,7 @@ public class StringOps {
     public static int[] allIndexOf (String string, char chr) {
         int index = 0;
         for(int i = 0; i < string.length; i++){
-            if(chr.charAt(0) == string.charAt(i)){
+            if(chr == string.charAt(i)){
                
                 int[] array = new int[index];
                 array[index] = string.indexOf(i);
@@ -81,7 +82,7 @@ public class StringOps {
             }
 
         }
-        return int[] arr;
+        return array[index];
     }
 }
 }
