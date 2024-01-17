@@ -1,10 +1,10 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        int[] test1 = {0, 1, 10};
-        int[] test2 = {0, 1, 10};
+       //int[] test1 = {0, 1, 10};
+       // int[] test2 = {0, 1, 10};
       //System.out.println(findMissingInt(test1));
       //System.out.println(secondMaxValue(test1));
-      System.out.println(containsTheSameElements(test1,test2));
+      //System.out.println(containsTheSameElements(test1,test2));
     }
     
     public static int findMissingInt (int [] array) {
@@ -70,7 +70,7 @@ public class ArrayOps {
                 decreasing = false;
             }
             if(array[i] <= array[i + 1]){
-                increasing = false;c
+                increasing = false;
             }
         }
         return false;
