@@ -71,11 +71,12 @@ public class StringOps {
     }
 
     public static int[] allIndexOf (String string, char chr) {
-        int index;
-        int[] arr = new int[index];
+        int index = 0;
         for(int i = 0; i < string.length; i++){
             if(chr.charAt(0) == string.charAt(i)){
-                int[] arr += string.indexOf(i);
+               
+                int[] array = new int[index];
+                array[index] = string.indexOf(i);
                 index++;
             }
 
