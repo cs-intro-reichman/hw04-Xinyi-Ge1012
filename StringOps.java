@@ -25,7 +25,7 @@ public class StringOps {
     }
 
     public static String capVowelsLowRest (String string) {
-        String ans = "";
+        char ans = "";
        for(int i = 0; i < string.length(); i++){
         if(string.chatAt(i) > 64 && string.chatAt(i) < 91){
             if(string.chatAt(i) == 'A' || string.chatAt(i) == 'E' || string.chatAt(i) == 'I' || string.chatAt(i) == 'O' || string.chatAt(i) == 'U'){
@@ -47,7 +47,7 @@ public class StringOps {
     public static String camelCase (String string) {
         boolean newOne = false;
         boolean firstOne = true;
-        int n = string.length;
+        int n = string.length();
         for (int i = 0; i < n; i++) {
             if (newOne == true && string.charAt(i) != ' ') {
                 if (string.charAt(i) >= 97 && string.charAt(i) <= 122) {
@@ -73,7 +73,7 @@ public class StringOps {
 
     public static int[] allIndexOf (String string, char chr) {
         int index = 0;
-        for(int i = 0; i < string.length; i++){
+        for(int i = 0; i < string.length(); i++){
             if(chr == string.charAt(i)){
                
                 int[] array = new int[index];
