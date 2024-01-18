@@ -34,14 +34,16 @@ public class StringOps {
             } else {
                 ans = ans + (char)(string.charAt(i) + 32);
             }
-         }
-          if(string.chatAt(i) >90){   
+         } else if(string.chatAt(i) >90){   
             if(string.chatAt(i) == 'a' || string.chatAt(i) == 'e' || string.chatAt(i) == 'i' || string.chatAt(i) == 'o' || string.chatAt(i) == 'u' ){
              ans = ans + (char)(string.chatAt(i)-32);
             } else {
             ans = ans + (char)(string.charAt(i));
             }
+         } else {
+            ans = ans + (char)(string.charAt(i));
          }
+
        }
         return ans;
     }
