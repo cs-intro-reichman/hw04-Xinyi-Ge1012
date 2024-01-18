@@ -88,7 +88,7 @@ public class StringOps {
             if(chr == string.charAt(i)){
                 array[j++] = i;
             }
+        }
         return array;
-    }
-}
+     }
 }
