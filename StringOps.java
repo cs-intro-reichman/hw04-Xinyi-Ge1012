@@ -84,7 +84,7 @@ public class StringOps {
             }
         }
            int[] array = new int[index];
-        for(int i = 0, j = 0; i < string.charAt(i); i++){
+        for(int i = 0, j = 0; i < string.length(); i++){
             if(chr == string.charAt(i)){
                 array[j++] = i;
             }
