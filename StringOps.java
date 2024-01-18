@@ -28,19 +28,20 @@ public class StringOps {
     public static String capVowelsLowRest (String string) {
         String ans = "";
        for(int i = 0; i < string.length(); i++){
-        if(string.chatAt(i) > 64 && string.chatAt(i) < 91){
+          if(string.chatAt(i) > 64 && string.chatAt(i) < 91){
             if(string.chatAt(i) == 'A' || string.chatAt(i) == 'E' || string.chatAt(i) == 'I' || string.chatAt(i) == 'O' || string.chatAt(i) == 'U'){
                 ans = ans + (char)(string.charAt(i));
             } else {
                 ans = ans + (char)(string.charAt(i) + 32);
             }
-        if(string.chatAt(i) >90){   
-        if(string.chatAt(i) == 'a' || string.chatAt(i) == 'e' || string.chatAt(i) == 'i' || string.chatAt(i) == 'o' || string.chatAt(i) == 'u' ){
+         }
+          if(string.chatAt(i) >90){   
+            if(string.chatAt(i) == 'a' || string.chatAt(i) == 'e' || string.chatAt(i) == 'i' || string.chatAt(i) == 'o' || string.chatAt(i) == 'u' ){
              ans = ans + (char)(string.chatAt(i)-32);
-        } else {
+            } else {
             ans = ans + (char)(string.charAt(i));
-        }
-      }
+            }
+         }
        }
         return ans;
     }
