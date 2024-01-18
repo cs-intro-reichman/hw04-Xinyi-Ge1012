@@ -22,10 +22,11 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
+       
     }
 
     public static String capVowelsLowRest (String string) {
-        char ans = "";
+        String ans = "";
        for(int i = 0; i < string.length(); i++){
         if(string.chatAt(i) > 64 && string.chatAt(i) < 91){
             if(string.chatAt(i) == 'A' || string.chatAt(i) == 'E' || string.chatAt(i) == 'I' || string.chatAt(i) == 'O' || string.chatAt(i) == 'U'){
@@ -75,14 +76,15 @@ public class StringOps {
         int index = 0;
         for(int i = 0; i < string.length(); i++){
             if(chr == string.charAt(i)){
-               
-                int[] array = new int[index];
-                array[index] = string.indexOf(i);
                 index++;
             }
-
         }
-        return array[index];
+           int[] array = new int[index];
+        for(int i = 0, j = 0; i < string.charAt(i); i++){
+            if(chr == string.charAt(i)){
+                array[j++] = i;
+            }
+        return array;
     }
 }
 }
